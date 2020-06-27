@@ -1,3 +1,3 @@
 # RDPNet
-RDPNet: Regularized Densely-connected PyramidNetwork for Salient Instance Segmentation
+Regularized Densely-connected PyramidNetwork for Salient Instance Segmentation
 Code is comming soon...
