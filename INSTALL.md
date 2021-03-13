@@ -26,7 +26,7 @@ conda install ipython
 # follow PyTorch installation in https://pytorch.org/get-started/locally/
 # we give the instructions for CUDA 9.0
 # You should install the consistent CUDA vesion which is same with your system's CUDA version!!!
-conda install -c pytorch pytorch==1.1 torchvision==0.2.2.post3 cudatoolkit=9.0
+conda install -c pytorch pytorch==1.1 torchvision==0.2.2 cudatoolkit=9.0
 
 export INSTALL_DIR=$PWD
 
