@@ -82,6 +82,8 @@ We provide a simple python script to visualize the result: `demo/visualize.py`.
 
 ### Acknowlogdement
 
+This repository is built under the help of the following three projects for academic use only:
+
 * [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark)
 
 * [FCOS](https://github.com/tianzhi0549/FCOS)
