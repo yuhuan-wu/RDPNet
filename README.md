@@ -34,7 +34,11 @@ it in our root folder (./apex/). You can also try other apex versions, which are
 
 ### Data
 
-Before training/testing our network, please download the data: [[Google Drive, 0.7G]](https://drive.google.com/file/d/1FR7K6gdIStio-QEimxGqN-VHgGrIJMN6), which contain data of the ISOD and SOC dataset.
+Before training/testing our network, please download the data: [[Google Drive, 0.7G]](https://drive.google.com/file/d/1FR7K6gdIStio-QEimxGqN-VHgGrIJMN6), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1s5tdYinlwVKTg09mA_l-Fg).
+
+The above zip file contains data of the ISOD and SOC dataset.
+
+Note: if you are blocked by Google services, you can contact me via e-mail and I will send you a copy of data and model weights.
 
 We have processed the data to json format so you can use them without any preprocessing steps. 
 After completion of downloading, extract the data and put them to `./datasets/` folder.
@@ -62,8 +66,8 @@ The default training code is for single gpu training since the training time is 
 
 It is also very simple to test our network. First you need to download the model weights:
 
-* ResNet-50 (ISOD dataset): [[Google Drive, 0.14G]](https://drive.google.com/file/d/1P9HnPbeHKL_1EzKOcVYhjiYXyUiKCaYP/view?usp=sharing)
-* ResNet-50 (SOC dataset): [[Google Drive, 0.14G]](https://drive.google.com/file/d/1faQeoplwGPcWoMzrTHKs2YX9BYjUaCwD/view?usp=sharing)
+* ResNet-50 (ISOD dataset): [[Google Drive, 0.14G]](https://drive.google.com/file/d/1P9HnPbeHKL_1EzKOcVYhjiYXyUiKCaYP/view?usp=sharing), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1pWCp6lwmEQW-07WGLl_zgw)
+* ResNet-50 (SOC dataset): [[Google Drive, 0.14G]](https://drive.google.com/file/d/1faQeoplwGPcWoMzrTHKs2YX9BYjUaCwD/view?usp=sharing), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1gN2a5Nd6eNBtd774uHk8XQ)
 
 Taking the test on the ISOD dataset for example: 
 1. Download [the ISOD trained model weights](), put it to `model_zoo/` folder.
