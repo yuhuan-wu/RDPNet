@@ -1,24 +1,30 @@
 # RDPNet
 
-IEEE TIP 2021: Regularized Densely-connected Pyramid Network for Salient Instance Segmentation
+[IEEE TIP 2021: Regularized Densely-connected Pyramid Network for Salient Instance Segmentation](https://ieeexplore.ieee.org/document/9382868)
 
-PyTorch Training and testing code are available. We have achieved SOTA performance on the salient instance segmentation (SIS) task.
+PyTorch training and testing code are available. We have achieved SOTA performance on the salient instance segmentation (SIS) task.
 
 If you run into any problems or feel any difficulties to run this code, do not hesitate to leave issues in this repository.
 
 My e-mail is: wuyuhuan @ mail.nankai (dot) edu.cn
 
+[Official PDF Link](https://ieeexplore.ieee.org/document/9382868)
+
 ### Citations
 
 If you are using the code/model/data provided here in a publication, please consider citing:
 
-    @article{wu2021regularized,
-      title={Regularized Densely-connected Pyramid Network for Salient Instance Segmentation},
-      author={Wu, Yu-Huan and Liu, Yun and Zhang, Le and Gao, Wang and Cheng, Ming-Ming},
-      journal={IEEE Transactions on Image Processing},
-      year={2021},
-      publisher={IEEE}
-    }
+@article{wu2021regularized,
+   title={Regularized Densely-Connected Pyramid Network for Salient Instance Segmentation},
+   volume={30},
+   ISSN={1941-0042},
+   DOI={10.1109/tip.2021.3065822},
+   journal={IEEE Transactions on Image Processing},
+   publisher={Institute of Electrical and Electronics Engineers (IEEE)},
+   author={Wu, Yu-Huan and Liu, Yun and Zhang, Le and Gao, Wang and Cheng, Ming-Ming},
+   year={2021},
+   pages={3897–3907}
+}
 
 ### Requirements
 
@@ -29,7 +35,7 @@ If you are using the code/model/data provided here in a publication, please cons
 
 Please check [INSTALL.md](INSTALL.md).
 
-Note: we have provided an early tested apex version (url: [here](https://github.com/NVIDIA/apex/tree/f2b3a62c8941027253b2decba96ba099f611387e)) and place
+Note: we have provided an early tested **apex** version (url: [here](https://github.com/NVIDIA/apex/tree/f2b3a62c8941027253b2decba96ba099f611387e)) and place
 it in our root folder (./apex/). You can also try other apex versions, which are not tested by us.
 
 ### Data
