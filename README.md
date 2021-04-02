@@ -14,6 +14,7 @@ My e-mail is: wuyuhuan @ mail.nankai (dot) edu.cn
 
 If you are using the code/model/data provided here in a publication, please consider citing:
 
+````
 @article{wu2021regularized,
    title={Regularized Densely-Connected Pyramid Network for Salient Instance Segmentation},
    volume={30},
@@ -25,6 +26,7 @@ If you are using the code/model/data provided here in a publication, please cons
    year={2021},
    pages={3897–3907}
 }
+````
 
 ### Requirements
 
@@ -44,7 +46,7 @@ Before training/testing our network, please download the data: [[Google Drive, 0
 
 The above zip file contains data of the ISOD and SOC dataset.
 
-Note: if you are blocked by Google services, you can contact me via e-mail and I will send you a copy of data and model weights.
+Note: if you are blocked by Google and Baidu services, you can contact me via e-mail and I will send you a copy of data and model weights.
 
 We have processed the data to json format so you can use them without any preprocessing steps. 
 After completion of downloading, extract the data and put them to `./datasets/` folder.
@@ -80,6 +82,8 @@ Taking the test on the ISOD dataset for example:
 2. cd the `scripts` folder, then run `bash test_isod.sh`.
 3. Testing step usually costs less than a minute. We use the official `cocoapi` for evaluation.
 
+**Note**: default cocoapi evaluation outputs AP, AP50, AP75 as default. To output the score of AP70, you need to change the `cocoeval.py` in cocoapi.
+See [**changes**](https://github.com/yuhuan-wu/cocoapi/commit/143563fe819d47080aabe1b5d6d4bb85669b8844#) in this commitment.
 
 ### Visualize
 
@@ -97,5 +101,9 @@ This repository is built under the help of the following three projects for acad
 * [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark)
 
 * [FCOS](https://github.com/tianzhi0549/FCOS)
+
+* [Apex](https://github.com/NVIDIA/apex)
+
+* [MS COCO Dataset](https://cocodataset.org/)
 
 * [S4Net](https://github.com/RuochenFan/S4Net)
