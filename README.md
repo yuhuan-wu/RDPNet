@@ -103,7 +103,7 @@ We provide a simple python script to visualize the result: `demo/visualize.py`.
 ### TODO
 
 1. Release the weights for **real-world applications**
-2. Add [Jitter](https://github.com/Jittor/jittor) implementation
+2. Add [Jittor](https://github.com/Jittor/jittor) implementation
 3. Train with the enhanced base detector (FCOS improved version) for better performance
 
 ### Acknowlogdement
