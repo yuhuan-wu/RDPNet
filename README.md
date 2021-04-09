@@ -8,7 +8,8 @@ If you run into any problems or feel any difficulties to run this code, do not h
 
 My e-mail is: wuyuhuan @ mail.nankai (dot) edu.cn
 
-[Official PDF Link](https://ieeexplore.ieee.org/document/9382868)
+[[Official Ver.]](https://ieeexplore.ieee.org/document/9382868)
+[[PDF]](https://mmcheng.net/wp-content/uploads/2021/03/21TIPInstSal.pdf)
 
 ### Citations
 
@@ -83,7 +84,13 @@ Taking the test on the ISOD dataset for example:
 3. Testing step usually costs less than a minute. We use the official `cocoapi` for evaluation.
 
 **Note**: default cocoapi evaluation outputs AP, AP50, AP75 as default. To output the score of AP70, you need to change the `cocoeval.py` in cocoapi.
-See [**changes**](https://github.com/yuhuan-wu/cocoapi/commit/143563fe819d47080aabe1b5d6d4bb85669b8844#) in this commitment.
+See [**changes**](https://github.com/yuhuan-wu/cocoapi/commit/143563fe819d47080aabe1b5d6d4bb85669b8844#) in this commitment:
+
+````
+BEFORE: stats[2] = _summarize(1, iouThr=.75, maxDets=self.params.maxDets[2])
+AFTER:  stats[2] = _summarize(1, iouThr=.70, maxDets=self.params.maxDets[2])
+````
+
 
 ### Visualize
 
@@ -93,6 +100,11 @@ We provide a simple python script to visualize the result: `demo/visualize.py`.
 2. Put images to the `demo/examples/` folder. I have prepared some images in this paper so do not worry that you have no images.
 3. cd demo, run `python visualize.py`
 
+### TODO
+
+1. Release the weights for **real-world applications**
+2. Add [Jitter](https://github.com/Jittor/jittor) implementation
+3. Train with the enhanced base detector (FCOS improved version) for better performance
 
 ### Acknowlogdement
 
