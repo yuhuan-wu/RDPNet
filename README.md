@@ -63,7 +63,7 @@ cd scripts
 bash ./train_isod.sh
 ```
 
-The training step should cost less than `1 hour` for single GTX 1080Ti or TITAN Xp. The script file will also store the network code, config file, log, and model weights.
+The training step should cost less than `1 hour` for single GTX 1080Ti or TITAN Xp. This script will also store the network code, config file, log, and model weights.
 
 We also provide ResNet-101 and ResNeXt-101 training scripts, and they are all in the `scripts` folder.
 
@@ -71,7 +71,7 @@ The default training code is for single gpu training since the training time is 
 `--nproc_per_node=1 \` with `--nproc_per_node=2 \` for 2-gpu training.
 
 
-### Test
+### Test / Evaluation / Results
 
 It is also very simple to test our network. First you need to download the model weights:
 
@@ -83,7 +83,10 @@ Taking the test on the ISOD dataset for example:
 2. cd the `scripts` folder, then run `bash test_isod.sh`.
 3. Testing step usually costs less than a minute. We use the official `cocoapi` for evaluation.
 
-**Note**: default cocoapi evaluation outputs AP, AP50, AP75 as default. To output the score of AP70, you need to change the `cocoeval.py` in cocoapi.
+
+**Note1**: We strongly recommend to use `cocoapi` to evaluate the performance. Such evaluation is also automatically done with the testing process.
+
+**Note2**: Default cocoapi evaluation outputs AP, AP50, AP75 peformance. To output the score of AP70, you need to change the `cocoeval.py` in cocoapi.
 See [**changes**](https://github.com/yuhuan-wu/cocoapi/commit/143563fe819d47080aabe1b5d6d4bb85669b8844#) in this commitment:
 
 ````
@@ -91,6 +94,7 @@ BEFORE: stats[2] = _summarize(1, iouThr=.75, maxDets=self.params.maxDets[2])
 AFTER:  stats[2] = _summarize(1, iouThr=.70, maxDets=self.params.maxDets[2])
 ````
 
+**Note3**: If you are not familiar with the evalutation metric `AP, AP50, AP75`, you can refer to the introduction website [here](https://cocodataset.org/#detection-eval). Our official paper also introduces them in the `Experiments` section.
 
 ### Visualize
 
@@ -99,12 +103,19 @@ We provide a simple python script to visualize the result: `demo/visualize.py`.
 1. Be sure that you have downloaded the ISOD pretrained weights [[Google Drive, 0.14G]](https://drive.google.com/file/d/1P9HnPbeHKL_1EzKOcVYhjiYXyUiKCaYP/view?usp=sharing).
 2. Put images to the `demo/examples/` folder. I have prepared some images in this paper so do not worry that you have no images.
 3. cd demo, run `python visualize.py`
+4. Visualized images are generated in the same folder. You can change the target folder in `visualize.py`.
 
 ### TODO
 
 1. Release the weights for **real-world applications**
 2. Add [Jittor](https://github.com/Jittor/jittor) implementation
-3. Train with the enhanced base detector (FCOS improved version) for better performance
+3. Train with the enhanced base detector (FCOS TPAMI version) for better performance. Currently the base detector is the FCOS CVPR version with lower performance.
+
+### Other Tips
+
+I am free to answer your question if you are interested in `salient instance segmentation`.
+I also encourage everyone to contact me via my e-mail. My e-mail is: wuyuhuan @ mail.nankai (dot) edu.cn
+
 
 ### Acknowlogdement
 
