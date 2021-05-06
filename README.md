@@ -109,7 +109,7 @@ We provide a simple python script to visualize the result: `demo/visualize.py`.
 
 1. Release the weights for **real-world applications**
 2. Add [Jittor](https://github.com/Jittor/jittor) implementation
-3. Train with the enhanced base detector (FCOS TPAMI version) for better performance. Currently the base detector is the FCOS CVPR version with lower performance.
+3. Train with the enhanced base detector (FCOS TPAMI version) for better performance. Currently the base detector is the FCOS conference version with a bit lower performance.
 
 ### Other Tips
 
