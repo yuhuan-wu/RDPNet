@@ -116,6 +116,10 @@ We provide a simple python script to visualize the result: `demo/visualize.py`.
 I am free to answer your question if you are interested in `salient instance segmentation`.
 I also encourage everyone to contact me via my e-mail. My e-mail is: wuyuhuan @ mail.nankai (dot) edu.cn
 
+### License
+
+The code is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) for NonCommercial use only.
+
 
 ### Acknowlogdement
 
