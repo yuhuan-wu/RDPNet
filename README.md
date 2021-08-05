@@ -110,6 +110,7 @@ We provide a simple python script to visualize the result: `demo/visualize.py`.
 1. Release the weights for **real-world applications**
 2. Add [Jittor](https://github.com/Jittor/jittor) implementation
 3. Train with the enhanced base detector (FCOS TPAMI version) for better performance. Currently the base detector is the FCOS conference version with a bit lower performance.
+4. Add results with the [P2T](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/2106.12011) transformer backbone.
 
 ### Other Tips
 
@@ -123,7 +124,7 @@ The code is released under the [Creative Commons Attribution-NonCommercial-Share
 
 ### Acknowlogdement
 
-This repository is built under the help of the following three projects for academic use only:
+This repository is built under the help of the following five projects for academic use only:
 
 * [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark)
 
