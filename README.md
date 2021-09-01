@@ -11,23 +11,7 @@ My e-mail is: wuyuhuan @ mail.nankai (dot) edu.cn
 [[Official Ver.]](https://ieeexplore.ieee.org/document/9382868)
 [[PDF]](https://mmcheng.net/wp-content/uploads/2021/03/21TIPInstSal.pdf)
 
-### Citations
-
-If you are using the code/model/data provided here in a publication, please consider citing:
-
-````
-@article{wu2021regularized,
-   title={Regularized Densely-Connected Pyramid Network for Salient Instance Segmentation},
-   volume={30},
-   ISSN={1941-0042},
-   DOI={10.1109/tip.2021.3065822},
-   journal={IEEE Transactions on Image Processing},
-   publisher={Institute of Electrical and Electronics Engineers (IEEE)},
-   author={Wu, Yu-Huan and Liu, Yun and Zhang, Le and Gao, Wang and Cheng, Ming-Ming},
-   year={2021},
-   pages={3897–3907}
-}
-````
+:fire: News! We will add pretrained models on the newly released COME15K dataset and corresponding results on its test set.
 
 ### Requirements
 
@@ -43,15 +27,17 @@ it in our root folder (./apex/). You can also try other apex versions, which are
 
 ### Data
 
-Before training/testing our network, please download the data: [[Google Drive, 0.7G]](https://drive.google.com/file/d/1FR7K6gdIStio-QEimxGqN-VHgGrIJMN6), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1s5tdYinlwVKTg09mA_l-Fg).
+Before training/testing our network, please download the data: 
 
-The above zip file contains data of the ISOD and SOC dataset.
+* ISOD and SOC datasets: [[Google Drive, 0.7G]](https://drive.google.com/file/d/1FR7K6gdIStio-QEimxGqN-VHgGrIJMN6), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1s5tdYinlwVKTg09mA_l-Fg). The above zip file contains data of the ISOD and SOC dataset.
+
+* COME15K datasets: First download original data on the [official site](https://github.com/JingZhang617/cascaded_rgbd_sod). Then please downloaed [json format annotations](https://drive.google.com/drive/folders/1-nLBBxkTuGR_-RHjIpl2PJtwA3rB3IRf?usp=sharing) made by me. Extract them to `datasets/COME15K/`.
 
 Note: if you are blocked by Google and Baidu services, you can contact me via e-mail and I will send you a copy of data and model weights.
 
 We have processed the data to json format so you can use them without any preprocessing steps. 
 After completion of downloading, extract the data and put them to `./datasets/` folder.
-Then, the `./datasets/` folder should contain two folders: `isod/, soc/`.
+Then, the `./datasets/` folder should contain two folders: `isod/, soc/, COME15K/`.
 
 ### Train
 
@@ -83,6 +69,8 @@ Taking the test on the ISOD dataset for example:
 2. cd the `scripts` folder, then run `bash test_isod.sh`.
 3. Testing step usually costs less than a minute. We use the official `cocoapi` for evaluation.
 
+:fire: For the COME-E set of the COME15K dataset, we achieve `43.1% AP and 67.3% AP@0.5` trained on the COME15K training set. 
+You can simply reproduce the result given the training config `configs/r50-come.yaml`.
 
 **Note1**: We strongly recommend to use `cocoapi` to evaluate the performance. Such evaluation is also automatically done with the testing process.
 
@@ -120,6 +108,25 @@ I also encourage everyone to contact me via my e-mail. My e-mail is: wuyuhuan @ 
 ### License
 
 The code is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) for NonCommercial use only.
+
+
+### Citations
+
+If you are using the code/model/data provided here in a publication, please consider citing our work:
+
+````
+@article{wu2021regularized,
+   title={Regularized Densely-Connected Pyramid Network for Salient Instance Segmentation},
+   volume={30},
+   ISSN={1941-0042},
+   DOI={10.1109/tip.2021.3065822},
+   journal={IEEE Transactions on Image Processing},
+   publisher={Institute of Electrical and Electronics Engineers (IEEE)},
+   author={Wu, Yu-Huan and Liu, Yun and Zhang, Le and Gao, Wang and Cheng, Ming-Ming},
+   year={2021},
+   pages={3897–3907}
+}
+````
 
 
 ### Acknowlogdement
