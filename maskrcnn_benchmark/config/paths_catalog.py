@@ -35,7 +35,7 @@ class DatasetCatalog(object):
             "img_dir": "COME15K/COME-E/RGB",
             "ann_file": "COME15K/test_e.json"
         },
-        "come_test_e_cocostyle": {
+        "come_test_h_cocostyle": {
             "img_dir": "COME15K/COME-H/RGB",
             "ann_file": "COME15K/test_h.json"
         },
