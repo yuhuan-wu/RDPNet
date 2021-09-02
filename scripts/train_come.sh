@@ -1,9 +1,9 @@
 
 cd ../
 SAVE_ROOT=training_dir/
-SAVE_DIR=isod_r50/
+SAVE_DIR=come_r50_try2/
 SAVE_PATH=$SAVE_ROOT/$SAVE_DIR
-CONFIG_NAME=configs/rdpnet/r50-isod.yaml
+CONFIG_NAME=configs/rdpnet/r50-come.yaml
 
 # rsync codes to SAVE_PATH
 mkdir $SAVE_ROOT

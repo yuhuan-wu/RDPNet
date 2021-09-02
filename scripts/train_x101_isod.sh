@@ -2,14 +2,12 @@
 cd ../
 SAVE_ROOT=training_dir/
 SAVE_DIR=isod_resxnet101/
-LOOP_IDX=$1
-SAVE_PATH=$SAVE_ROOT/$SAVE_DIR/$LOOP_IDX
+SAVE_PATH=$SAVE_ROOT/$SAVE_DIR
 CONFIG_NAME=configs/rdpnet/x101-isod.yaml
 
 # rsync codes to SAVE_PATH
 mkdir $SAVE_ROOT
 mkdir $SAVE_ROOT/$SAVE_DIR
-mkdir $SAVE_ROOT/$SAVE_DIR/$LOOP_IDX
 
 rsync -auv maskrcnn_benchmark $SAVE_PATH
 rsync -auv scripts/$0 $SAVE_PATH

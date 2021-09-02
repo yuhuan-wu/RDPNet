@@ -27,6 +27,18 @@ class DatasetCatalog(object):
             "img_dir": "soc/imgs",
             "ann_file": "soc/test.json"
         },
+        "come_train_cocostyle": {
+            "img_dir": "COME15K/COME/RGB",
+            "ann_file": "COME15K/train.json"
+        },
+        "come_test_e_cocostyle": {
+            "img_dir": "COME15K/COME-E/RGB",
+            "ann_file": "COME15K/test_e.json"
+        },
+        "come_test_e_cocostyle": {
+            "img_dir": "COME15K/COME-H/RGB",
+            "ann_file": "COME15K/test_h.json"
+        },
         "coco_2017_train": {
             "img_dir": "coco/train2017",
             "ann_file": "coco/annotations/instances_train2017.json"
