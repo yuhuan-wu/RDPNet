@@ -31,7 +31,7 @@ Before training/testing our network, please download the data:
 
 * ISOD and SOC datasets: [[Google Drive, 0.7G]](https://drive.google.com/file/d/1FR7K6gdIStio-QEimxGqN-VHgGrIJMN6), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1s5tdYinlwVKTg09mA_l-Fg). The above zip file contains data of the ISOD and SOC dataset.
 
-* COME15K datasets: First download original data on the [official site](https://github.com/JingZhang617/cascaded_rgbd_sod). Then please downloaed [json format annotations](https://drive.google.com/drive/folders/1-nLBBxkTuGR_-RHjIpl2PJtwA3rB3IRf?usp=sharing) made by me. Extract them to `datasets/COME15K/`.
+* COME15K datasets: First download original image data on the [official site](https://github.com/JingZhang617/cascaded_rgbd_sod). Then please downloaed [json format annotations](https://drive.google.com/drive/folders/1-nLBBxkTuGR_-RHjIpl2PJtwA3rB3IRf?usp=sharing) made by me. Extract them to `datasets/COME15K/`.
 
 Note: if you are blocked by Google and Baidu services, you can contact me via e-mail and I will send you a copy of data and model weights.
 
@@ -61,11 +61,12 @@ The default training code is for single gpu training since the training time is 
 
 It is also very simple to test our network. First you need to download the model weights:
 
-* ResNet-50 (ISOD dataset): [[Google Drive, 0.14G]](https://drive.google.com/file/d/1P9HnPbeHKL_1EzKOcVYhjiYXyUiKCaYP/view?usp=sharing), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1pWCp6lwmEQW-07WGLl_zgw)
-* ResNet-50 (SOC dataset): [[Google Drive, 0.14G]](https://drive.google.com/file/d/1faQeoplwGPcWoMzrTHKs2YX9BYjUaCwD/view?usp=sharing), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1gN2a5Nd6eNBtd774uHk8XQ)
+* ResNet-50 (ISOD dataset): [[Google Drive, 137MB]](https://drive.google.com/file/d/1P9HnPbeHKL_1EzKOcVYhjiYXyUiKCaYP/view?usp=sharing), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1pWCp6lwmEQW-07WGLl_zgw)
+* ResNet-50 (SOC dataset): [[Google Drive, 137MB]](https://drive.google.com/file/d/1faQeoplwGPcWoMzrTHKs2YX9BYjUaCwD/view?usp=sharing), [[Baidu Yun, yhwu]](https://pan.baidu.com/s/1gN2a5Nd6eNBtd774uHk8XQ)
+* ResNet-50 (COME15K dataset): [[Google Drive, 137MB]](https://drive.google.com/drive/folders/1UoxfLQyWWqQke4mn7YWCsFMk5SU-Y6me?usp=sharing), [[Baidu Yun, iz2c]](https://pan.baidu.com/s/1qabnNtGZncmCi7UyfkOIWA)
 
 Taking the test on the ISOD dataset for example: 
-1. Download [the ISOD trained model weights](), put it to `model_zoo/` folder.
+1. Download [the ISOD trained model weights](https://drive.google.com/file/d/1P9HnPbeHKL_1EzKOcVYhjiYXyUiKCaYP/view?usp=sharing), put it to `model_zoo/` folder.
 2. cd the `scripts` folder, then run `bash test_isod.sh`.
 3. Testing step usually costs less than a minute. We use the official `cocoapi` for evaluation.
 
@@ -74,7 +75,7 @@ You can simply reproduce the result given the training config `configs/r50-come.
 
 **Note1**: We strongly recommend to use `cocoapi` to evaluate the performance. Such evaluation is also automatically done with the testing process.
 
-**Note2**: Default cocoapi evaluation outputs AP, AP50, AP75 peformance. To output the score of AP70, you need to change the `cocoeval.py` in cocoapi.
+**Note2**: Default cocoapi evaluation outputs AP, AP50, AP75 peformance. **To output the score of AP70**, you need to change the `cocoeval.py` in cocoapi.
 See [**changes**](https://github.com/yuhuan-wu/cocoapi/commit/143563fe819d47080aabe1b5d6d4bb85669b8844#) in this commitment:
 
 ````
