@@ -11,7 +11,7 @@ My e-mail is: wuyuhuan @ mail.nankai (dot) edu.cn
 [[Official Ver.]](https://ieeexplore.ieee.org/document/9382868)
 [[PDF]](https://mmcheng.net/wp-content/uploads/2021/03/21TIPInstSal.pdf)
 
-:fire: News! We will add pretrained models on the newly released COME15K dataset and corresponding results on its test set.
+:fire: News! We have added pretrained models on the newly released **COME15K dataset** and corresponding results on its test set. Pretrained model dowloading url: ResNet-50 (COME15K dataset), [[Google Drive, 137MB]](https://drive.google.com/drive/folders/1UoxfLQyWWqQke4mn7YWCsFMk5SU-Y6me?usp=sharing), [[Baidu Yun, iz2c]](https://pan.baidu.com/s/1qabnNtGZncmCi7UyfkOIWA)
 
 ### Requirements
 
