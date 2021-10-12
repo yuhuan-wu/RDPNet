@@ -3,6 +3,6 @@ yacs
 cython
 matplotlib
 tqdm
-opencv-python==3.4.3.18
+opencv-python==4.2.0.32
 torch
 scipy
